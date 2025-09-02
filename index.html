@@ -5,71 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Saya</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
         .container {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 600px;
-            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #007BFF, #0056b3);
+            color: white;
+            padding: 40px 30px;
             text-align: center;
         }
+
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid #007BFF;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 20px;
+            display: block;
         }
+
         h1 {
-            color: #007BFF;
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
-        p {
-            line-height: 1.6;
+
+        p.tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
-        .social-links a {
-            margin: 0 10px;
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #007BFF;
+            border-bottom: 3px solid #007BFF;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+
+        .skill-list, .project-list, .experience-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            display: inline-block;
+            background: #e7f3ff;
+            color: #007BFF;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .project-item, .experience-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #007BFF;
+        }
+
+        .project-title, .experience-title {
+            font-weight: 600;
+            color: #0056b3;
+        }
+
+        .project-desc, .experience-desc {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .contact-info a {
             color: #007BFF;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
         }
-        .social-links a:hover {
+
+        .contact-info a:hover {
             text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f1f5f9;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Ganti src dengan URL gambar profil kamu -->
-        <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+        <!-- Bagian Header -->
+        <header>
+            <img src="https://via.placeholder.com/160" alt="Foto Profil" class="profile-img">
+            <h1>Ahmad Fauzi</h1>
+            <p class="tagline">Web Developer & UI/UX Enthusiast</p>
+        </header>
 
-        <h1>Nama Lengkap</h1>
-        <p><strong>Umur:</strong> 25 tahun</p>
-        <p><strong>Lokasi:</strong> Jakarta, Indonesia</p>
-        <p><strong>Profesi:</strong> Web Developer</p>
-        <p>
-            Saya seorang pengembang web yang mencintai teknologi dan desain. 
-            Saya suka belajar hal-hal baru dan menciptakan solusi digital yang bermanfaat.
-        </p>
+        <!-- Konten Utama -->
+        <div class="content">
+            <!-- Tentang Saya -->
+            <section>
+                <h2>Tentang Saya</h2>
+                <p>
+                    Saya adalah seorang pengembang web penuh semangat yang berfokus pada pembuatan aplikasi web yang responsif, cepat, dan ramah pengguna. 
+                    Saya memiliki pengalaman lebih dari 3 tahun dalam pengembangan frontend dan backend, serta tertarik pada desain antarmuka yang intuitif.
+                </p>
+                <p>
+                    Saat ini saya bekerja sebagai Full Stack Developer di TechSolusi, sambil terus belajar teknologi baru seperti React, Node.js, dan cloud computing.
+                </p>
+            </section>
 
-        <div class="social-links">
-            <a href="https://github.com/username" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
-            <a href="mailto:email@example.com">Email</a>
+            <!-- Keahlian -->
+            <section>
+                <h2>Keahlian</h2>
+                <ul class="skill-list">
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>MongoDB</li>
+                    <li>Git & GitHub</li>
+                    <li>Figma</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </section>
+
+            <!-- Pengalaman Kerja -->
+            <section>
+                <h2>Pengalaman Kerja</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Full Stack Developer - TechSolusi</div>
+                    <div class="experience-desc"><strong>Jan 2022 – Sekarang</strong></div>
+                    <p>
+                        Mengembangkan aplikasi web berbasis MERN stack, berkolaborasi dengan tim desain dan QA, serta mengelola deployment ke server produksi.
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Frontend Developer - WebKreasi</div>
+                    <div class="experience-desc"><strong>Jun 2020 – Des 2021</strong></div>
+                    <p>
+                        Membangun antarmuka pengguna menggunakan React, memperbaiki performa website, dan menerapkan desain responsif untuk berbagai perangkat.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Pendidikan -->
+            <section>
+                <h2>Pendidikan</h2>
+                <div class="experience-item">
+                    <div class="experience-title">S1 Teknik Informatika</div>
+                    <div class="experience-desc">Universitas Teknologi Indonesia (2016 – 2020)</div>
+                    <p>
+                        IPK: 3.78 | Fokus pada pengembangan perangkat lunak dan sistem informasi.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Proyek -->
+            <section>
+                <h2>Proyek Unggulan</h2>
+                <div class="project-item">
+                    <div class="project-title">Aplikasi To-Do List (React & Firebase)</div>
+                    <p class="project-desc">
+                        Aplikasi manajemen tugas dengan fitur autentikasi, penyimpanan real-time, dan antarmuka drag-and-drop.
+                    </p>
+                    <a href="https://github.com/username/todo-app" target="_blank">Lihat di GitHub</a>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">E-Commerce Sederhana (Node.js & MongoDB)</div>
+                    <p class="project-desc">
+                        Platform belanja online dengan keranjang, sistem login, dan dashboard admin.
+                    </p>
+                    <a href="https://github.com/username/ecommerce-node" target="_blank">Lihat di GitHub</a>
+                </div>
+            </section>
+
+            <!-- Kontak -->
+            <section>
+                <h2>Kontak</h2>
+                <div class="contact-info">
+                    <a href="mailto:ahmad.fauzi@email.com">📧 ahmad.fauzi@email.com</a>
+                    <a href="https://github.com/ahmadfauzi-dev" target="_blank">🐙 GitHub</a>
+                    <a href="https://linkedin.com/in/ahmadfauzi-dev" target="_blank">💼 LinkedIn</a>
+                    <a href="https://wa.me/6281234567890" target="_blank">📱 WhatsApp</a>
+                </div>
+            </section>
         </div>
+
+        <!-- Footer -->
+        <footer>
+            &copy; 2025 Ahmad Fauzi. Dibuat dengan HTML & CSS.
+        </footer>
     </div>
 </body>
 </html>
